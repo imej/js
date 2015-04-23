@@ -7,6 +7,7 @@ RES.SO.CONSTANTS = RES.SO.CONSTANTS || {};
 RES.SO.CONSTANTS.BLANK_IMAGE = "blank";
 RES.SO.CONSTANTS.IMG_SRC_PREFIX = "images/";
 RES.SO.CONSTANTS.IMG_SRC_SUFFIX = ".png";
+RES.SO.CONSTANTS.CONTAINER_ID = "container";
 
 RES.SO.squares9 = (function () {
     "use strict";
@@ -109,32 +110,64 @@ RES.SO.squares9 = (function () {
         return rv;
     }
     
-    function emptySqure(sid) {
-        if (m_squares[sid]) {
-            m_squares[sid].isEmpty = true;
-            m_squares[sid].imageSrc = RES.SO.CONSTANTS.IMG_SRC_PREFIX + RES.SO.CONSTANTS.BLANK_IMAGE + RES.SO.CONSTANTS.IMG_SRC_SUFFIX;
-            
-            m_imgs[m_squares[sid].currentPosition].src = m_squares[sid].imageSrc;
-            m_emptySquare = m_squares[sid];
+    function emptySqure() {
+        // Randomly pick a squre to be empty
+        var i,
+            sid = Math.floor(Math.random() * 9);
+                
+        for (i = 0; i < m_squares.length; i += 1) {
+            if (i === sid) {
+                m_squares[i].isEmpty = true;
+                m_emptySquare = m_squares[sid];
+            } else {
+                m_squares[i].isEmpty = false;
+            }
         }
     }
     
-    function draw() {
+    function getSquareSRCByPostion(pid) {
+        var rv = "",
+            i;
+        
+        if (pid < m_squares.length) {
+            for (i = 0; i < m_squares.length; i += 1) {
+                if (m_squares[i].currentPosition === pid) {
+                    if (m_squares[i].isEmpty) {
+                        rv = RES.SO.CONSTANTS.IMG_SRC_PREFIX + RES.SO.CONSTANTS.BLANK_IMAGE + RES.SO.CONSTANTS.IMG_SRC_SUFFIX;
+                    } else {
+                        rv = m_squares[i].imageSrc;
+                    }
+                    break;
+                }
+            }
+        }
+        
+        return rv;
+    }
+    
+    function draw(settings) {
         // initial display of the squares
         var tobj,
             trobj,
             tdobj,
             imgobj,
+            btnobj,
+            containobj,
+            missingobj,
+            msgobj,
             i,
             j,
-            k = 0;
+            k = 0,
+            l;
         
-        // shuffle squares to random positions
-        m_initLayout = shuffle(m_initLayout);
-        for (i = 0; i < m_initLayout.length; i += 1) {
-            m_squares[i].currentPosition = m_initLayout[i];
+        if (settings.shuffle === true) {
+            // shuffle squares to random positions
+            m_initLayout = shuffle(m_initLayout);
+            for (i = 0; i < m_initLayout.length; i += 1) {
+                m_squares[i].currentPosition = m_initLayout[i];
+            }
         }
-                
+                        
         tobj = document.createElement("table");
         tobj.setAttribute("border", "1");
         tobj.setAttribute("align", "center");
@@ -147,7 +180,7 @@ RES.SO.squares9 = (function () {
                 tdobj = document.createElement("td");
                 imgobj = document.createElement("img");
                 imgobj.setAttribute("id", k);
-                imgobj.setAttribute("src", m_squares[m_initLayout[k]].imageSrc);
+                imgobj.setAttribute("src", getSquareSRCByPostion(k));
                 imgobj.setAttribute("onclick", "RES.SO.squares9.move( " + k + " )");
                 tdobj.appendChild(imgobj);
                 trobj.appendChild(tdobj);
@@ -161,11 +194,40 @@ RES.SO.squares9 = (function () {
             tobj.appendChild(trobj);
         }
         
-        if (document.getElementById("container")) {
-            document.getElementById("container").appendChild(tobj);
+        btnobj = document.createElement("button");
+        btnobj.setAttribute("type", "button");
+        btnobj.setAttribute("name", "btnStart");
+        btnobj.setAttribute("id", "btnStart");
+        btnobj.setAttribute("align", "center");
+        btnobj.setAttribute("onclick", "RES.SO.squares9.start()");
+        btnobj.innerHTML = "Start Play";
+        
+        msgobj = document.createElement("div");
+        msgobj.setAttribute("id", "msg");
+            
+        if (document.getElementById(RES.SO.CONSTANTS.CONTAINER_ID)) {
+            containobj = document.getElementById(RES.SO.CONSTANTS.CONTAINER_ID);
+            
+            if (settings.clearScreen) {
+                while (containobj.firstChild) {
+                    containobj.removeChild(containobj.firstChild);
+                }
+            }
+            
+            containobj.appendChild(tobj);
+            containobj.appendChild(btnobj);
+            
+            if (m_emptySquare) {
+                missingobj = document.createElement("div");
+                missingobj.setAttribute("id", "missingSqure");
+                missingobj.innerHTML = "<img src='" + m_emptySquare.imageSrc + "'>";
+                containobj.appendChild(missingobj);
+            }
+            
+            containobj.appendChild(msgobj);
         }
     }
-    
+        
     function isAllArrived() {
         // To check if all squares have reached their proper position. 
         // Returning true means the game is over and the player wins
@@ -173,18 +235,15 @@ RES.SO.squares9 = (function () {
         
         for (i = 0; i < m_squares.length; i += 1) {
             if (!m_squares[i].isArrived()) {
-                //console.log("square[" + i + "] has not arrived");
                 return false;
             }
         }
         
-        //console.log("All arrived");
         return true;
     }
         
     return {
         init: function () {
-            //m_empty = 0;
             m_imgSrcPrefix = RES.SO.CONSTANTS.IMG_SRC_PREFIX;
             m_imgSrcSuffix = RES.SO.CONSTANTS.IMG_SRC_SUFFIX;
             
@@ -199,17 +258,26 @@ RES.SO.squares9 = (function () {
             m_squares[6] = createSquare(6, 6);
             m_squares[7] = createSquare(7, 7);
             m_squares[8] = createSquare(8, 8);
-                 
-            draw();
             
-            emptySqure(0);
+            var settings = {
+                shuffle: false
+            };
             
+            draw(settings);
+        },
+        
+        start: function () {
+            var settings = {
+                shuffle: true,
+                clearScreen: true
+            };
+            
+            emptySqure();
+            
+            draw(settings);
+                    
             m_steps = 0;
             m_startTime = new Date();
-            
-            if (isAllArrived()) {
-                console.log("All done before I even do anything");
-            }
         },
         
         move: function (positionId) {
@@ -226,7 +294,9 @@ RES.SO.squares9 = (function () {
             if (isAllArrived()) {
                 m_endTime = new Date();
                 timeUsed = (m_endTime.getTime() - m_startTime.getTime()) / 1000;
-                console.log("You did it in " + m_steps + " steps, " + timeUsed + " seconds.");
+                if (document.getElementById("msg")) {
+                    document.getElementById("msg").innerHTML = "You did it in " + m_steps + " steps, " + timeUsed + " seconds.";
+                }
             }
         }
     };
