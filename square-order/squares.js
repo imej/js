@@ -7,7 +7,13 @@ RES.SO.CONSTANTS = RES.SO.CONSTANTS || {};
 RES.SO.CONSTANTS.BLANK_IMAGE = "blank";
 RES.SO.CONSTANTS.IMG_SRC_PREFIX = "images/";
 RES.SO.CONSTANTS.IMG_SRC_SUFFIX = ".png";
+
 RES.SO.CONSTANTS.CONTAINER_ID = "container";
+RES.SO.CONSTANTS.TABLE_DIV_ID = "squaresWrap";
+RES.SO.CONSTANTS.TABLE_ID = "squares";
+RES.SO.CONSTANTS.MSG_DIV_ID = "msg";
+RES.SO.CONSTANTS.MISSING_SQUARE_DIV_ID = "missingSqure";
+RES.SO.CONSTANTS.ACTION_DIV_ID = "action";
 
 RES.SO.squares9 = (function () {
     "use strict";
@@ -22,6 +28,8 @@ RES.SO.squares9 = (function () {
         m_startTime,
         m_endTime,
         m_initLayout = [0, 1, 2, 3, 4, 5, 6, 7, 8], // Maps the positions to each square when it is first displayed
+        m_tableObj,
+        m_missingObj,
         
         switchImages = function (img1, img2) {
             var tmp = m_imgs[img1].src;
@@ -147,7 +155,9 @@ RES.SO.squares9 = (function () {
     
     function draw(settings) {
         // initial display of the squares
-        var tobj,
+        var tablediv,
+            actiondiv,
+            tobj,
             trobj,
             tdobj,
             imgobj,
@@ -167,9 +177,14 @@ RES.SO.squares9 = (function () {
                 m_squares[i].currentPosition = m_initLayout[i];
             }
         }
-                        
+        
+        // 1. Build squares
+        tablediv = document.createElement("div");
+        tablediv.setAttribute("id", RES.SO.CONSTANTS.TABLE_DIV_ID);
+        
         tobj = document.createElement("table");
-        tobj.setAttribute("border", "1");
+        tobj.setAttribute("id", RES.SO.CONSTANTS.TABLE_ID);
+        tobj.setAttribute("class", "uncompleted");
         tobj.setAttribute("align", "center");
         
         // We need a 3 * 3 table
@@ -194,6 +209,10 @@ RES.SO.squares9 = (function () {
             tobj.appendChild(trobj);
         }
         
+        tablediv.appendChild(tobj);
+        m_tableObj = tobj;
+        
+        // 2. Build action buttons
         btnobj = document.createElement("button");
         btnobj.setAttribute("type", "button");
         btnobj.setAttribute("name", "btnStart");
@@ -202,9 +221,15 @@ RES.SO.squares9 = (function () {
         btnobj.setAttribute("onclick", "RES.SO.squares9.start()");
         btnobj.innerHTML = "Start Play";
         
+        actiondiv = document.createElement("dvi");
+        actiondiv.setAttribute("id", RES.SO.CONSTANTS.ACTION_DIV_ID);
+        actiondiv.appendChild(btnobj);
+        
+        //3. Build message area
         msgobj = document.createElement("div");
-        msgobj.setAttribute("id", "msg");
-            
+        msgobj.setAttribute("id", RES.SO.CONSTANTS.MSG_DIV_ID);
+        
+        // Print 
         if (document.getElementById(RES.SO.CONSTANTS.CONTAINER_ID)) {
             containobj = document.getElementById(RES.SO.CONSTANTS.CONTAINER_ID);
             
@@ -214,16 +239,17 @@ RES.SO.squares9 = (function () {
                 }
             }
             
-            containobj.appendChild(tobj);
-            containobj.appendChild(btnobj);
+            containobj.appendChild(tablediv);
             
             if (m_emptySquare) {
                 missingobj = document.createElement("div");
-                missingobj.setAttribute("id", "missingSqure");
+                missingobj.setAttribute("id", RES.SO.CONSTANTS.MISSING_SQUARE_DIV_ID);
                 missingobj.innerHTML = "<img src='" + m_emptySquare.imageSrc + "'>";
                 containobj.appendChild(missingobj);
+                m_missingObj = missingobj;
             }
             
+            containobj.appendChild(actiondiv);
             containobj.appendChild(msgobj);
         }
     }
@@ -284,18 +310,29 @@ RES.SO.squares9 = (function () {
             // Figure out which squre is on the clicked position
             var i,
                 timeUsed;
-            for (i = 0; i < m_squares.length; i += 1) {
-                if (m_squares[i].currentPosition === parseInt(positionId, 10)) {
-                    m_squares[i].move();
-                    break;
-                }
-            }
             
-            if (isAllArrived()) {
-                m_endTime = new Date();
-                timeUsed = (m_endTime.getTime() - m_startTime.getTime()) / 1000;
-                if (document.getElementById("msg")) {
-                    document.getElementById("msg").innerHTML = "You did it in " + m_steps + " steps, " + timeUsed + " seconds.";
+            if (!isAllArrived()) {
+                for (i = 0; i < m_squares.length; i += 1) {
+                    if (m_squares[i].currentPosition === parseInt(positionId, 10)) {
+                        m_squares[i].move();
+                        break;
+                    }
+                }
+                
+                if (isAllArrived()) {
+                    m_endTime = new Date();
+                    timeUsed = (m_endTime.getTime() - m_startTime.getTime()) / 1000;
+                    
+                    m_tableObj.setAttribute("class", "completed");
+                    if (m_missingObj) {
+                        m_missingObj.innerHTML = "";
+                    }
+                    
+                    m_imgs[m_emptySquare.currentPosition].src = m_emptySquare.imageSrc;
+                    
+                    if (document.getElementById("msg")) {
+                        document.getElementById("msg").innerHTML = "You did it in " + m_steps + " steps, " + timeUsed + " seconds.";
+                    }
                 }
             }
         }
