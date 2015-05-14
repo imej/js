@@ -1,0 +1,22 @@
+[
+    {"id": 101, "discipline": "Insulation", "desciplineAccount": "5000", "costCodePart1": "5001", "costCodePart2": "01", "description": "Install Insulation 2'' to 4'' pipe size", "unitOfMeasure": "LM" },
+    {"id": 102, "discipline": "Insulation", "desciplineAccount": "5000", "costCodePart1": "5001", "costCodePart2": "02", "description": "Install Insulation 6'' to 8'' pipe size", "unitOfMeasure": "LM" },
+    {"id": 103, "discipline": "Insulation", "desciplineAccount": "5000", "costCodePart1": "5001", "costCodePart2": "03", "description": "Install Insulation 10''-14'' pipe size", "unitOfMeasure": "LM" },
+    {"id": 104, "discipline": "Insulation", "desciplineAccount": "5000", "costCodePart1": "5001", "costCodePart2": "04", "description": "Install Insulation 16''-24'' pipe size", "unitOfMeasure": "LM" },
+    {"id": 105, "discipline": "Insulation", "desciplineAccount": "5000", "costCodePart1": "5001", "costCodePart2": "05", "description": "Install Insulation 26''-42'' pipe size", "unitOfMeasure": "LM" },
+    {"id": 106, "discipline": "Insulation", "desciplineAccount": "5000", "costCodePart1": "5001", "costCodePart2": "06", "description": "Temporary Wrapping", "unitOfMeasure": "LM" },
+    {"id": 107, "discipline": "Scaffold ", "desciplineAccount": "5000", "costCodePart1": "5301", "costCodePart2": "01", "description": "Platform", "unitOfMeasure": "m2" },
+    {"id": 108, "discipline": "Scaffold ", "desciplineAccount": "5000", "costCodePart1": "5302", "costCodePart2": "01", "description": "stairs", "unitOfMeasure": "Ea" },
+    {"id": 109, "discipline": "Scaffold ", "desciplineAccount": "5000", "costCodePart1": "5302", "costCodePart2": "02", "description": "stair tower", "unitOfMeasure": "LM" },
+    {"id": 110, "discipline": "Scaffold ", "desciplineAccount": "5000", "costCodePart1": "5303", "costCodePart2": "01", "description": "Hoarding", "unitOfMeasure": "Ea" },
+    {"id": 111, "discipline": "Subcontract", "desciplineAccount": "6000", "costCodePart1": "6011", "costCodePart2": "01", "description": "NDE Subcontract", "unitOfMeasure": "$" },
+    {"id": 112, "discipline": "Subcontract", "desciplineAccount": "6000", "costCodePart1": "6011", "costCodePart2": "02", "description": "QC Inspection", "unitOfMeasure": "$" },
+    {"id": 113, "discipline": "Subcontract", "desciplineAccount": "6000", "costCodePart1": "6012", "costCodePart2": "01", "description": "Turnover", "unitOfMeasure": "$" },
+    {"id": 114, "discipline": "Subcontract", "desciplineAccount": "6000", "costCodePart1": "6121", "costCodePart2": "01", "description": "PWHT", "unitOfMeasure": "$" },
+    {"id": 115, "discipline": "Subcontract", "desciplineAccount": "6000", "costCodePart1": "6122", "costCodePart2": "01", "description": "Galvanizing", "unitOfMeasure": "$" },
+    {"id": 116, "discipline": "Subcontract", "desciplineAccount": "6000", "costCodePart1": "6201", "costCodePart2": "01", "description": "Electrical subs", "unitOfMeasure": "$" },
+    {"id": 117, "discipline": "Subcontract", "desciplineAccount": "6000", "costCodePart1": "6251", "costCodePart2": "01", "description": "Insulation", "unitOfMeasure": "$" },
+    {"id": 118, "discipline": "Subcontract", "desciplineAccount": "6000", "costCodePart1": "6311", "costCodePart2": "01", "description": "Internal/extrnal coating and painting", "unitOfMeasure": "$" },
+    {"id": 119, "discipline": "Subcontract", "desciplineAccount": "6000", "costCodePart1": "6312", "costCodePart2": "01", "description": "P and V Sub", "unitOfMeasure": "$" },
+    {"id": 120, "discipline": "Subcontract", "desciplineAccount": "6000", "costCodePart1": "6312", "costCodePart2": "02", "description": "P and V supplied glycol", "unitOfMeasure": "$" }
+]

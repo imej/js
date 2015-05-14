@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="js/pcd.js"></script>  
+    </head>
+    <body>
+        <script>
+            var pg = RES.PCD.Pagination;
+            pg.setRcordsPerPage(20);
+            pg.setRcordsCount(100);
+            pg.setCurrentPage(2);
+            pg.setURLPrefix('#/template/');
+            console.log(pg.getPages());
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+[
+    {"id": 81, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4111", "costCodePart2": "02", "description": "Install Cable tray supports", "unitOfMeasure": "Ea" },
+    {"id": 82, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4111", "costCodePart2": "03", "description": "Install tray cover", "unitOfMeasure": "LM" },
+    {"id": 83, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4121", "costCodePart2": "01", "description": "Pull Power Cable", "unitOfMeasure": "LM" },
+    {"id": 84, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4121", "costCodePart2": "02", "description": "Pull I&C Cable", "unitOfMeasure": "LM" },
+    {"id": 85, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4122", "costCodePart2": "01", "description": "Glanding", "unitOfMeasure": "Ea" },
+    {"id": 86, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4131", "costCodePart2": "01", "description": "Terminations", "unitOfMeasure": "Ea" },
+    {"id": 87, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4141", "costCodePart2": "01", "description": "Pull Ground/Bond Wire (≥ #6)", "unitOfMeasure": "LM" },
+    {"id": 88, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4141", "costCodePart2": "02", "description": "Grounding/Bonding Connections (≥ #6)", "unitOfMeasure": "Ea" },
+    {"id": 89, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4142", "costCodePart2": "01", "description": "Grounding/Bonding Connections (≤ #8)", "unitOfMeasure": "Ea" },
+    {"id": 90, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4151", "costCodePart2": "01", "description": "Install MI EHT", "unitOfMeasure": "LM" },
+    {"id": 91, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4151", "costCodePart2": "02", "description": "Install SR EHT ", "unitOfMeasure": "LM" },
+    {"id": 92, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4151", "costCodePart2": "03", "description": "Install Power/End Kits", "unitOfMeasure": "Ea" },
+    {"id": 93, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4161", "costCodePart2": "01", "description": "Install Junction Boxes", "unitOfMeasure": "Ea" },
+    {"id": 94, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4061", "costCodePart2": "02", "description": "Install MCC Section (per section)", "unitOfMeasure": "Ea" },
+    {"id": 95, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4061", "costCodePart2": "03", "description": "Prep Bldg Floor for Bottom Entry MCC (per section)", "unitOfMeasure": "Ea" },
+    {"id": 96, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4061", "costCodePart2": "04 ", "description": "Install Main Breaker", "unitOfMeasure": "Ea" },
+    {"id": 97, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4061", "costCodePart2": "05", "description": "Assemble and Install Distribution Panel", "unitOfMeasure": "Ea" },
+    {"id": 98, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4061", "costCodePart2": "06", "description": "Install Transformer", "unitOfMeasure": "Ea" },
+    {"id": 99, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4171", "costCodePart2": "01", "description": "QC/TO - Electrical & Instrumentation Direct labor hours", "unitOfMeasure": "Mhrs" },
+    {"id": 100, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4199", "costCodePart2": "01", "description": "Electrical Demolition", "unitOfMeasure": "LM" }
+]

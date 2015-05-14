@@ -1,0 +1,32 @@
+<style type="text/css">
+.my-header {
+    background-color: #76A0D3; 
+    color: #ffffff; 
+    font-weight: bold;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}    
+.row-even {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.row-odd {
+    background-color:#BDE3FB;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}</style>
+<div class="container-fluid">
+    <ul class="pagination pagination">
+        <li ng-repeat="pg in pages" class="{{pg.label == currentPage ? 'active' : ''}}"><a href="{{pg.url}}">{{pg.label}}</a></li>
+    </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 my-header">Cost Code</div>
+            <div class="col-sm-10 my-header">Description</div>
+        </div>
+        <div class="row" ng-repeat="cc in costCodeBookList">
+            <div class="col-sm-2" ng-class="$even ? 'row-even' : 'row-odd'"><a href="#/cost-code-book/detail/{{cc.id}}">{{cc.costCodePart1}}-{{cc.costCodePart2}}</a></div>
+            <div class="col-sm-10" ng-class="$even ? 'row-even' : 'row-odd'">{{cc.description}}</div>
+        </div>
+    </div>
+</div>

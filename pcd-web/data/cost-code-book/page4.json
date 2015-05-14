@@ -1,0 +1,22 @@
+[
+    {"id": 61, "discipline": "Pipe Install", "desciplineAccount": "2000", "costCodePart1": "2251", "costCodePart2": "05", "description": "Install Shoes 26''-42'' pipe size", "unitOfMeasure": "Ea" },
+    {"id": 62, "discipline": "Pipe Install", "desciplineAccount": "2000", "costCodePart1": "2251", "costCodePart2": "06", "description": "Install Shoes > 48'' pipe size", "unitOfMeasure": "Ea" },
+    {"id": 63, "discipline": "Pipe Install", "desciplineAccount": "2000", "costCodePart1": "2251", "costCodePart2": "07", "description": "Install Field Supports", "unitOfMeasure": "Ea" },
+    {"id": 64, "discipline": "Pipe Install", "desciplineAccount": "2000", "costCodePart1": "2261", "costCodePart2": "01", "description": "Install Special items", "unitOfMeasure": "Ea" },
+    {"id": 65, "discipline": "Pipe Install", "desciplineAccount": "2000", "costCodePart1": "2271", "costCodePart2": "01", "description": "QC/TO - Piping Direct labor hours", "unitOfMeasure": "Mhrs" },
+    {"id": 66, "discipline": "Pipe Install", "desciplineAccount": "2000", "costCodePart1": "2272", "costCodePart2": "01", "description": "Sparkwatch", "unitOfMeasure": "Mhrs" },
+    {"id": 67, "discipline": "Pipe Install", "desciplineAccount": "2000", "costCodePart1": "2299", "costCodePart2": "01", "description": "Pipe Demolition/Removal", "unitOfMeasure": "LM" },
+    {"id": 68, "discipline": "Structural", "desciplineAccount": "3000", "costCodePart1": "3001", "costCodePart2": "01", "description": "Erect Steel", "unitOfMeasure": "Ea" },
+    {"id": 69, "discipline": "Structural", "desciplineAccount": "3000", "costCodePart1": "3011", "costCodePart2": "01", "description": "Bolt Tensioning", "unitOfMeasure": "Ea" },
+    {"id": 70, "discipline": "Structural", "desciplineAccount": "3000", "costCodePart1": "3021", "costCodePart2": "01", "description": "Install grating", "unitOfMeasure": "Ea" },
+    {"id": 71, "discipline": "Structural", "desciplineAccount": "3000", "costCodePart1": "3022", "costCodePart2": "01", "description": "Install handrail/gates/platforms", "unitOfMeasure": "Ea" },
+    {"id": 72, "discipline": "Structural", "desciplineAccount": "3000", "costCodePart1": "3022", "costCodePart2": "02", "description": "Install stairs, ladders (incl. cage)", "unitOfMeasure": "Ea" },
+    {"id": 73, "discipline": "Structural", "desciplineAccount": "3000", "costCodePart1": "3022", "costCodePart2": "03", "description": "Install platforms / walkways", "unitOfMeasure": "Ea" },
+    {"id": 74, "discipline": "Structural", "desciplineAccount": "3000", "costCodePart1": "3099", "costCodePart2": "01", "description": "Remove structural components", "unitOfMeasure": "Ea" },
+    {"id": 75, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4001", "costCodePart2": "01", "description": "Install Instruments", "unitOfMeasure": "Ea" },
+    {"id": 76, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4001", "costCodePart2": "02", "description": "Install Instrument supports", "unitOfMeasure": "Ea" },
+    {"id": 77, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4002", "costCodePart2": "01", "description": "Fab & Install Tubing raceway", "unitOfMeasure": "LM" },
+    {"id": 78, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4002", "costCodePart2": "02", "description": "Install tubing", "unitOfMeasure": "LM" },
+    {"id": 79, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4002", "costCodePart2": "03", "description": "Install tube bundle", "unitOfMeasure": "LM" },
+    {"id": 80, "discipline": "Electrical ", "desciplineAccount": "4000", "costCodePart1": "4111", "costCodePart2": "01", "description": "Install Cable tray", "unitOfMeasure": "LM" }
+]

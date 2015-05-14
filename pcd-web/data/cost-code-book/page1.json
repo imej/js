@@ -1,0 +1,22 @@
+[
+    {"id": 1, "discipline": "Warehouse", "desciplineAccount": "1000", "costCodePart1": "1011", "costCodePart2": "01", "description": "Receive/stage pipe materials", "unitOfMeasure": "Mhrs" },
+    {"id": 2, "discipline": "Warehouse", "desciplineAccount": "1000", "costCodePart1": "1031", "costCodePart2": "02", "description": "Receive/stage electrical materials", "unitOfMeasure": "Mhrs" },
+    {"id": 3, "discipline": "Warehouse", "desciplineAccount": "1000", "costCodePart1": "1081", "costCodePart2": "01", "description": "Small tools and supplies - Tool crib", "unitOfMeasure": "Mhrs" },
+    {"id": 4, "discipline": "Warehouse", "desciplineAccount": "1000", "costCodePart1": "1201", "costCodePart2": "01", "description": "Care and Preservation", "unitOfMeasure": "Mhrs" },
+    {"id": 5, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2001", "costCodePart2": "01", "description": "Receive/sort fabrication materials", "unitOfMeasure": "ISO" },
+    {"id": 6, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2020", "costCodePart2": "01", "description": "Cut/Fit/Handle CS Pipe ", "unitOfMeasure": "DI" },
+    {"id": 7, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2020", "costCodePart2": "02", "description": "Cut/Fit/Handle SS Pipe ", "unitOfMeasure": "DI" },
+    {"id": 8, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2021", "costCodePart2": "01", "description": "Cut CS pipe", "unitOfMeasure": "DI" },
+    {"id": 9, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2021", "costCodePart2": "02", "description": "Cut SS pipe", "unitOfMeasure": "DI" },
+    {"id": 10, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2021", "costCodePart2": "03", "description": "Cold Cut", "unitOfMeasure": "DI" },
+    {"id": 11, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2031", "costCodePart2": "01", "description": "Fit CS pipe ", "unitOfMeasure": "DI" },
+    {"id": 12, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2031", "costCodePart2": "02", "description": "Fit SS pipe", "unitOfMeasure": "DI" },
+    {"id": 13, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2033", "costCodePart2": "01", "description": "Handle CS pipe - shop ", "unitOfMeasure": "DI" },
+    {"id": 14, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2033", "costCodePart2": "02", "description": "Handle SS pipe - shop ", "unitOfMeasure": "DI" },
+    {"id": 15, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2041", "costCodePart2": "01", "description": "Weld CS <= 0.5'' WT", "unitOfMeasure": "DI" },
+    {"id": 16, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2041", "costCodePart2": "02", "description": "Weld CS 0.5'' - 1.0'' WT", "unitOfMeasure": "DI" },
+    {"id": 17, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2041", "costCodePart2": "03", "description": "Weld CS > 1.0'' WT", "unitOfMeasure": "DI" },
+    {"id": 18, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2041", "costCodePart2": "04", "description": "Weld Socket weld connections", "unitOfMeasure": "DI" },
+    {"id": 19, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2041", "costCodePart2": "05", "description": "Weld SS all thickness", "unitOfMeasure": "DI" },
+    {"id": 20, "discipline": "Fabrication", "desciplineAccount": "2000", "costCodePart1": "2041", "costCodePart2": "06", "description": "Weld CS <= 0.5'' WT  POSTION WELD", "unitOfMeasure": "DI" }
+]

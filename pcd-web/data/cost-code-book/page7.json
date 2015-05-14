@@ -1,0 +1,22 @@
+[
+    {"id": 121, "discipline": "Subcontract", "desciplineAccount": "6000", "costCodePart1": "6321", "costCodePart2": "01", "description": "Hot tap backcharge", "unitOfMeasure": "$" },
+    {"id": 122, "discipline": "Subcontract", "desciplineAccount": "6000", "costCodePart1": "6391", "costCodePart2": "01", "description": "HSE", "unitOfMeasure": "$" },
+    {"id": 123, "discipline": "Equipment", "desciplineAccount": "6000", "costCodePart1": "6511", "costCodePart2": "01", "description": "Structural steel Crane operator hours", "unitOfMeasure": "Mhr" },
+    {"id": 124, "discipline": "Equipment", "desciplineAccount": "6000", "costCodePart1": "6521", "costCodePart2": "01", "description": "Piping - Crane operator hours", "unitOfMeasure": "Mhr" },
+    {"id": 125, "discipline": "Equipment", "desciplineAccount": "6000", "costCodePart1": "6531", "costCodePart2": "01", "description": "Electrical- Crane operator hours", "unitOfMeasure": "Mhr" },
+    {"id": 126, "discipline": "Equipment", "desciplineAccount": "6000", "costCodePart1": "6541", "costCodePart2": "01", "description": "Standby - Crane operator hours", "unitOfMeasure": "Mhr" },
+    {"id": 127, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7101", "costCodePart2": "01", "description": "Project Manager", "unitOfMeasure": "Mhr" },
+    {"id": 128, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7102", "costCodePart2": "01", "description": "Construction Manager", "unitOfMeasure": "Mhr" },
+    {"id": 129, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7103", "costCodePart2": "01", "description": "Project Safety", "unitOfMeasure": "Mhr" },
+    {"id": 130, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7104", "costCodePart2": "01", "description": "Quality Manager", "unitOfMeasure": "Mhr" },
+    {"id": 131, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7105", "costCodePart2": "01", "description": "HSE Manager", "unitOfMeasure": "Mhr" },
+    {"id": 132, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7106", "costCodePart2": "01", "description": "Human Resources - Craft", "unitOfMeasure": "Mhr" },
+    {"id": 133, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7111", "costCodePart2": "01", "description": "General Superintendent", "unitOfMeasure": "Mhr" },
+    {"id": 134, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7112", "costCodePart2": "01", "description": "General Foreman", "unitOfMeasure": "Mhr" },
+    {"id": 135, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7113", "costCodePart2": "01", "description": "Field Engineer", "unitOfMeasure": "Mhr" },
+    {"id": 136, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7121", "costCodePart2": "01", "description": "Project Field Coordinator", "unitOfMeasure": "Mhr" },
+    {"id": 137, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7122", "costCodePart2": "01", "description": "Project Controls", "unitOfMeasure": "Mhr" },
+    {"id": 138, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7123", "costCodePart2": "01", "description": "Planner Scheduler", "unitOfMeasure": "Mhr" },
+    {"id": 139, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7131", "costCodePart2": "01", "description": "Equipment Coordinator", "unitOfMeasure": "Mhr" },
+    {"id": 140, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7132", "costCodePart2": "01", "description": "Administration", "unitOfMeasure": "Mhr" }
+]

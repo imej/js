@@ -1,0 +1,16 @@
+[
+    {"id": 141, "discipline": "Indirect", "desciplineAccount": "7000", "costCodePart1": "7133", "costCodePart2": "01", "description": "Document Control", "unitOfMeasure": "Mhr" },
+    {"id": 142, "discipline": "Engineering", "desciplineAccount": "7000", "costCodePart1": "7401", "costCodePart2": "01", "description": "Design Calculations", "unitOfMeasure": "Mhr" },
+    {"id": 143, "discipline": "Engineering", "desciplineAccount": "7000", "costCodePart1": "7402", "costCodePart2": "01", "description": "Drafting and Design", "unitOfMeasure": "Mhr" },
+    {"id": 144, "discipline": "Engineering", "desciplineAccount": "7000", "costCodePart1": "7403", "costCodePart2": "01", "description": "Design Deliverables", "unitOfMeasure": "Mhr" },
+    {"id": 145, "discipline": "Engineering", "desciplineAccount": "7000", "costCodePart1": "7404", "costCodePart2": "01", "description": "CWP development", "unitOfMeasure": "Ea" },
+    {"id": 146, "discipline": "Engineering", "desciplineAccount": "7000", "costCodePart1": "7405", "costCodePart2": "01", "description": "As-Built", "unitOfMeasure": "Dwg" },
+    {"id": 147, "discipline": "Planning", "desciplineAccount": "7000", "costCodePart1": "7501", "costCodePart2": "01", "description": "Site walkdown", "unitOfMeasure": "Mhr" },
+    {"id": 148, "discipline": "Planning", "desciplineAccount": "7000", "costCodePart1": "7501", "costCodePart2": "02", "description": "Project Execution plan ", "unitOfMeasure": "Mhr" },
+    {"id": 149, "discipline": "Planning", "desciplineAccount": "7000", "costCodePart1": "7501", "costCodePart2": "03", "description": "Procurement and Rentals", "unitOfMeasure": "Mhr" },
+    {"id": 150, "discipline": "Planning", "desciplineAccount": "7000", "costCodePart1": "7501", "costCodePart2": "04", "description": "Safety / Quality meetings", "unitOfMeasure": "Mhr" },
+    {"id": 151, "discipline": "Planning", "desciplineAccount": "7000", "costCodePart1": "7501", "costCodePart2": "05", "description": "Training / Orientation", "unitOfMeasure": "Mhr" },
+    {"id": 152, "discipline": "Planning", "desciplineAccount": "7000", "costCodePart1": "7501", "costCodePart2": "06", "description": "Toolbox / Hazard Assessment", "unitOfMeasure": "Mhr" },
+    {"id": 153, "discipline": "Planning", "desciplineAccount": "7000", "costCodePart1": "7501", "costCodePart2": "07", "description": "Other meetings (progress)", "unitOfMeasure": "Mhr" },
+    {"id": 154, "discipline": "Planning", "desciplineAccount": "7000", "costCodePart1": "7511", "costCodePart2": "01", "description": "Project Mobilization", "unitOfMeasure": "ISO" }
+]
