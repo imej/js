@@ -2,40 +2,40 @@
     <h3>Cost Code Book Detail</h3>
     <div id="buttons">
         <button id="btnEdit" type="button" class="btn btn-primary" ng-hide="isEditMode" ng-click="isEditMode = true">Edit</button>
-        <button id="btnSave" type="button" class="btn btn-primary" ng-show="isEditMode" ng-click="isEditMode = false">Save</button>
-        <button id="btnClose" type="button" class="btn btn-primary" ng-click="back()">Close</button>
+        <button id="btnSave" type="button" class="btn btn-primary" ng-show="isEditMode" ng-click="save()">Save</button>
+        <button id="btnClose" type="button" class="btn btn-primary" back>Close</button>
     </div>
-    <form>
+    <form name="FormCostCodeDetail">
         <div class="form-group">
             <label for="txtDiscipline">Discipline:</label>
-            <input type="text" class="form-control" id="txtDiscipline" placeholder="Discipline" value="{{costCodeBook.discipline}}" ng-show="isEditMode">
+            <input type="text" name="fldDiscipline" class="form-control" id="txtDiscipline" placeholder="Discipline" ng-model="costCodeBook.discipline" ng-show="isEditMode" required>
             <div ng-hide="isEditMode">{{costCodeBook.discipline}}</div>
         </div>
         <div class="form-group">
             <label for="txtDescAcc">Descipline Account:</label>
-            <input type="text" class="form-control" id="txtDescAcc" placeholder="Descipline Account" value="{{costCodeBook.desciplineAccount}}" ng-show="isEditMode">
+            <input type="text" class="form-control" id="txtDescAcc" placeholder="Descipline Account" ng-model="costCodeBook.desciplineAccount" ng-show="isEditMode" required>
             <div ng-hide="isEditMode">{{costCodeBook.desciplineAccount}}</div>
         </div>
         <div class="form-group">
             <label for="txtCCP1">Cost Code Part 1:</label>
-            <input type="text" class="form-control" id="txtCCP1" placeholder="Cost Code Part 1" value="{{costCodeBook.costCodePart1}}" ng-show="isEditMode">
+            <input type="text" class="form-control" id="txtCCP1" placeholder="Cost Code Part 1" ng-model="costCodeBook.costCodePart1" ng-show="isEditMode" required>
             <div ng-hide="isEditMode">{{costCodeBook.costCodePart1}}</div>
         </div>
         <div class="form-group">
             <label for="txtCCP2">Cost Code Part 2:</label>
-            <input type="text" class="form-control" id="txtCCP2" placeholder="Cost Code Part 2" value="{{costCodeBook.costCodePart2}}" ng-show="isEditMode">
+            <input type="text" class="form-control" id="txtCCP2" placeholder="Cost Code Part 2" ng-model="costCodeBook.costCodePart2" ng-show="isEditMode" required>
             <div ng-hide="isEditMode">{{costCodeBook.costCodePart2}}</div>
         </div>
         <div class="form-group">
             <label for="txtDescription">Description:</label>
-            <input type="text" class="form-control" id="txtDescription" placeholder="Description" value="{{costCodeBook.description}}" ng-show="isEditMode">
+            <input type="text" class="form-control" id="txtDescription" placeholder="Description" ng-model="costCodeBook.description" ng-show="isEditMode" required>
             <div ng-hide="isEditMode">{{costCodeBook.description}}</div>
         </div>
-        <div class="form-group">
+        <div class="form-group has-error has-feedback">
             <label for="txtunitOfMeasure">Unit of Measure:</label>
-            <input type="text" class="form-control" id="txtunitOfMeasure" placeholder="Unit of Measure" value="{{costCodeBook.unitOfMeasure}}" ng-show="isEditMode">
+            <input type="text" class="form-control" id="txtunitOfMeasure" placeholder="Unit of Measure" ng-model="costCodeBook.unitOfMeasure" ng-show="isEditMode" required>
+            <span class="glyphicon glyphicon-remove form-control-feedback"></span>
             <div ng-hide="isEditMode">{{costCodeBook.unitOfMeasure}}</div>
         </div>
     </form>
-    url: {{previousUrl}}
 </div>

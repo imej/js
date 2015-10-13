@@ -142,3 +142,26 @@ RES.PCD.Pagination = (function () {
         }
     };
 }());
+
+RES.PCD.MaintainHistory = function (rs, url) {
+    /////////////////////////////////////////////////
+    // We maintain the history of the hashes in an array
+    // in the $rootScope. We will use it to close the 
+    // current page - go back to the previous page.
+    /////////////////////////////////////////////////
+    'use strict';
+    
+    if (rs && url) {
+        if (rs.LinkHistory) {
+            if (rs.LinkHistory[rs.LinkHistory.length - 1].lastIndexOf('/') === url.lastIndexOf('/')) {
+                if (rs.LinkHistory[rs.LinkHistory.length - 1].substring(0, rs.LinkHistory[rs.LinkHistory.length - 1].lastIndexOf('/')) === url.substring(0, url.lastIndexOf('/'))) {
+                    rs.LinkHistory[rs.LinkHistory.length - 1] = url;
+                }
+            } else {
+                rs.LinkHistory.push(url);
+            }
+        } else {
+            rs.LinkHistory = [url];
+        }
+    }
+};
